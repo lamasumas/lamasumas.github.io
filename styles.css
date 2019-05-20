@@ -12,3 +12,9 @@ html {
 	box-shadow: 7px 7px;
 	margin: 1%;
 }
+
+.projectColumn:hover{
+
+	background-color: lightgrey;
+
+}
