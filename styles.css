@@ -8,5 +8,6 @@ html {
 
 .projectColumn{
 
+	box-shadow: 7px 7px;
 	margin: 1%;
 }
