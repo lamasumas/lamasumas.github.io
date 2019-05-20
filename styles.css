@@ -8,8 +8,6 @@ html {
 
 .projectColumn{
 
-
-	border: 1px solid black;
 	margin: 1%;
-	border-radius: 10px;
+	box-shadow: 7px 7px;
 }
