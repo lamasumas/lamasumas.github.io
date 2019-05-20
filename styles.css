@@ -7,7 +7,7 @@ html {
 }
 
 .projectColumn{
-
+	border: 1px solid black;	
 	box-shadow: 7px 7px;
 	margin: 1%;
 }
