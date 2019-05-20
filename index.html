@@ -11,6 +11,35 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+				$(document).ready(function(){
+					$("#Repository1").click(
+						function() {
+							window.open("https://github.com/lamasumas/A-_Java", "_blank").focus();
+
+						});
+					$("#Repository2").click(
+                                                function() {
+                                                        window.open("https://github.com/lamasumas/GeneticAlgorithm", "_blank").focus();
+
+                                                });
+					$("#Repository3").click(
+                                                function() {
+                                                        window.open("https://github.com/lamasumas/RandomPythonScripts", "_blank").focus();
+
+                                                });
+					$("#Repository4").click(
+                                                function() {
+                                                        window.open("https://github.com/lamasumas/Google_Hashcode_2018_Solution", "_blank").focus();
+
+                                                });
+
+
+
+
+				});
+		</script>
+
 
 		<title> Eduardo's Personal Page </title>
 	</head>
@@ -22,16 +51,15 @@
 		<h2> Personal projects </h2>
 		<section class="row">
 			<h2> </h2>
-			<section class="col projectColumn rounded border-success"><h4> A* visualization</h4>
+			<section id="Repository1" class="col projectColumn rounded border-success"><h4> A* visualization</h4>
 				<p>  A visualization of the well known A* algorith used for path finding.</p>
-				<a href="https://github.com/lamasumas/A-_Java">&#62;&#62; Go to repository &#60;&#60;</a>
 			</section>
-			<section class="col projectColumn rounded border-success">
+			<section id="Repository2" class="col projectColumn rounded border-success">
 				<h4>Genetic Algorithm</h4>
 				<p> An implementation of an genetic algorithm along with a visualization, where some dots in the screen has to find the shortest path to one point in the screen.
 			</section>
 			<section class ="w-100"></section>
-			<section class="col projectColumn rounded border-success">
+			<section id="Repository3" class="col projectColumn rounded border-success">
 				<h4>Random Python Scripts</h4>
 				<p>Some random python scrypts done for fun</p>
 				<ul>
@@ -41,7 +69,7 @@
 					<li> Text-to-Speech </li>
 				</ul>
 			</section> 
-			<section class="col projectColumn rounded border-success">
+			<section id="Repository4" class="col projectColumn rounded border-success">
 				<h4>Google Hascode 2018 Solution</h4>
 				<p>A solution done in my free time of the Google Hascode Hackatlon of 2018. The solution is done in python in the scripts:</p>
 				<ul>
