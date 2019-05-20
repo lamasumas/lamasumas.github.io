@@ -5,3 +5,10 @@
 html {
 	margin: 10%;
 }
+
+.projectColumn{
+
+
+	border: 5px solid black;
+	margin: 2%;
+}
