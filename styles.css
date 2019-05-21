@@ -1,8 +1,7 @@
-
 * {
 	box-sizing: content-box;
 }
-html {
+main {
 	margin: 10%;
 }
 
@@ -18,5 +17,11 @@ html {
 }
 
 
-
+#cover-container{
+	height: 100vh;
+	
+}
+#innerCover{
+	text-align:center;	
+}
 

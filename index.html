@@ -15,7 +15,7 @@
 				$(document).ready(function(){
 					$("#Repository1").click(
 						function() {
-							window.open("https://github.com/lamasumas/A-_Java", "_blank").focus();
+							window.open("https://github.custify-content-centerom/lamasumas/A-_Java", "_blank").focus();
 
 						});
 					$("#Repository2").click(
@@ -44,11 +44,20 @@
 		<title> Eduardo's Personal Page </title>
 	</head>
 	<body>
+	<header id="cover-container" class="d-flex align-items-center justify-content-center">
+		<section  id="innerCover" >
+			<h1>Eduardo Lamas Suarez</h1>
+			<h5>Student of Software engineering in Oviedo's university</h5>
+			<nav class="controlNavigation">
+				<a id="GoToProjects"href="#myProjects">My Projects</a>
+				<a href="#">Personal Background</a>
+			</nav>
+		</section>
+	</header>
 
-		<header>
-		</header>
+
 		<main>	
-		<h2> Personal projects </h2>
+		<h2 id="myProjects">My projects </h2>
 		<section class="row">
 			<h2> </h2>
 			<section id="Repository1" class="col projectColumn rounded border-success"><h4> A* visualization</h4>
@@ -80,6 +89,7 @@
 			</section>
 
 		</section>
+
 		</main>
 
 	</body>
