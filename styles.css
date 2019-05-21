@@ -1,8 +1,15 @@
 * {
 	box-sizing: content-box;
 }
+html{
+	scroll-behavior: smooth;
+
+}
 main {
 	margin: 10%;
+}
+section{
+	background-color:white;
 }
 
 .projectColumn{
@@ -16,8 +23,7 @@ main {
 	background-color: lightgrey;
 }
 
-
-#cover-container{
+#PersonalBackground,#myProjects, #cover-container{
 	height: 100vh;
 	
 }
