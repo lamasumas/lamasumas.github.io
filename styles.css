@@ -40,6 +40,8 @@ section{
 
 #CoverTitle{
 	font-family: "Aprilea";
+	 border-radius: 10px;
+
 }
 
 
@@ -48,12 +50,23 @@ section{
 	
 }
 #innerCover{
-	text-align:center;	
+	text-align:center;
+	border-radius: 10px;	
 }
+#scrollingButtons{
+	margin-left: auto;
+	margin-right: auto;
 
+}
 #cover-container{
 	background-image: url("images/cover-page.JPG");
 	background-position: center;
   	background-repeat: no-repeat;
   	background-size: cover; 
 }
+
+#scrollingButtons, #CoverTitle,  #innerCover{
+	        background: rgba(255,255,255,0.7);
+
+}
+
