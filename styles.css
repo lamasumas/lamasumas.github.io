@@ -1,6 +1,21 @@
+
+
+@font-face {
+	font-family: "Aprilea";
+	src: url("fonts/Aprilea/Aprilea.woff");
+}
+
+@font-face{
+	font-family:"Champagne";
+	src: url("fonts/Champagne/Champagne_Limousines.woff");
+
+}
+
 * {
 	box-sizing: content-box;
+	font-family:"Champagne";
 }
+
 html{
 	scroll-behavior: smooth;
 
@@ -23,6 +38,11 @@ section{
 	background-color: lightgrey;
 }
 
+#CoverTitle{
+	font-family: "Aprilea";
+}
+
+
 #PersonalBackground,#myProjects, #cover-container{
 	height: 100vh;
 	
@@ -31,3 +51,9 @@ section{
 	text-align:center;	
 }
 
+#cover-container{
+	background-image: url("images/cover-page.JPG");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover; 
+}
