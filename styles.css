@@ -18,8 +18,9 @@
 
 html{
 	scroll-behavior: smooth;
-
+	background-color:black;
 }
+
 main {
 	margin: 10%;
 }
