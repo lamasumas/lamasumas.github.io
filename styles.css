@@ -38,6 +38,13 @@ section{
 	background-color: lightgrey;
 }
 
+.GeneralSections{
+	vertical-align:center;
+	padding-top:10%;
+}
+
+
+
 #CoverTitle{
 	font-family: "Aprilea";
 	 border-radius: 10px;
@@ -52,6 +59,7 @@ section{
 #innerCover{
 	text-align:center;
 	border-radius: 10px;	
+	padding: 2%;
 }
 #scrollingButtons{
 	margin-left: auto;
