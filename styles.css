@@ -44,6 +44,7 @@ section{
 	padding-top:10%;
 }
 
+Condición de expanión (si h es admisible)
 
 
 #CoverTitle{
@@ -79,3 +80,7 @@ section{
 
 }
 
+#PersonalBackground > p {
+	font-size: 150%;
+
+}
