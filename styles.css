@@ -19,6 +19,7 @@
 html{
 	scroll-behavior: smooth;
 	background-color:black;
+	
 }
 
 main {
@@ -26,6 +27,8 @@ main {
 }
 section{
 	background-color:white;
+	
+
 }
 
 .projectColumn{
@@ -33,6 +36,7 @@ section{
 	border: 1px solid black;	
 	box-shadow: 7px 7px;
 	margin: 1%;
+	cursor: pointer;
 }
 .projectColumn:hover{
 
@@ -42,9 +46,8 @@ section{
 .GeneralSections{
 	vertical-align:center;
 	padding-top:10%;
+	margin:auto;
 }
-
-Condición de expanión (si h es admisible)
 
 
 #CoverTitle{
@@ -53,9 +56,12 @@ Condición de expanión (si h es admisible)
 
 }
 
-
-#PersonalBackground,#myProjects, #cover-container{
+#cover-container{
 	height: 100vh;
+}
+
+#PersonalBackground,#myProjects{
+	height: auto;
 	
 }
 #innerCover{
@@ -78,5 +84,23 @@ Condición de expanión (si h es admisible)
 #scrollingButtons, #CoverTitle,  #innerCover{
 	        background: rgba(255,255,255,0.7);
 
+}
+#PersonalBackground{
+	margin: auto;
+	padding-bottom: 5%;
+}
+
+footer{
+	text-align: center;
+	padding-bottom: 2%;
+}
+
+footer > i {
+	width: 10%;
+	height: 10%;
+	font-size: 200%;
+	margin-right: 7%;
+	margin-left: 7%;
+	cursor: pointer;
 }
 
