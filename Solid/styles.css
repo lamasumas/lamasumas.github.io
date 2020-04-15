@@ -1,0 +1,124 @@
+
+
+@font-face {
+	font-family: "Aprilea";
+	src: url("fonts/Aprilea/Aprilea.woff");
+}
+
+@font-face{
+	font-family:"Champagne";
+	src: url("fonts/Champagne/Champagne_Limousines.woff");
+
+}
+
+* {
+	box-sizing: content-box;
+	font-family:"Champagne";
+}
+
+html{
+	scroll-behavior: smooth;
+	background-color:black;
+	
+}
+
+main {
+	margin: 10%;
+}
+section{
+	background-color:white;
+	
+
+}
+
+.projectColumn{
+
+	border: 1px solid black;	
+	box-shadow: 7px 7px;
+	margin: 1%;
+	cursor: pointer;
+}
+.projectColumn:hover{
+
+	background-color: lightgrey;
+}
+
+.GeneralSections{
+	vertical-align:center;
+	padding-top:10%;
+	margin:auto;
+}
+
+
+#CoverTitle{
+	font-family: "Aprilea";
+	 border-radius: 10px;
+
+}
+
+#cover-container{
+	height: 100vh;
+}
+
+#PersonalBackground,#myProjects{
+	height: auto;
+	
+}
+#innerCover{
+	text-align:center;
+	border-radius: 10px;	
+	padding: 2%;
+}
+#scrollingButtons{
+	margin-left: auto;
+	margin-right: auto;
+
+}
+#cover-container{
+	background-image: url("images/cover-page.JPG");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover; 
+}
+
+#scrollingButtons, #CoverTitle,  #innerCover{
+	        background: rgba(255,255,255,0.7);
+
+}
+#PersonalBackground{
+	margin: auto;
+	padding-bottom: 5%;
+}
+
+#fotoPerfil{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	height: 20%;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 8px;
+	background-color: black;
+	box-shadow: 1px 1px;
+	padding: 0.5%;
+	margin-bottom: 3%;
+}
+
+footer{
+	text-align: center;
+	padding-bottom: 2%;
+}
+
+footer > i {
+	width: 10%;
+	height: 10%;
+	font-size: 200%;
+	margin-right: 7%;
+	margin-left: 7%;
+	cursor: pointer;
+}
+
+
+
+
