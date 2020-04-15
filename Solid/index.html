@@ -17,7 +17,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="actions.js" type="text/javascript"></script>
-		<title> Eduardo's Personal Page </title>
+		<title> Viades Help Page </title>
 	</head>
 	<body>
 	<header id="cover-container" class="d-flex align-items-center justify-content-center">
@@ -49,17 +49,138 @@
 		<section id="Developers" class="GeneralSections">
 			<h2 >Developer Team </h2>
 			<section class="row">
+				<section id="member1" class="col projectColumn rounded border-success" data-toggle="tooltip" data-placement="top" title="Marcos github account">
+					<img id="fotoPerfil" src="https://avatars3.githubusercontent.com/u/35761118?s=460&u=8322d2a066f84c61ab5bd6db0d46c5fb58f40020&v=4" alt="Marcos profile picture in Github">
+					<h3> Marcos Álvarez García</h3>
+					<p></p>
+				</section><section id="member2" class="col projectColumn rounded border-success" data-toggle="tooltip" data-placement="top" title="Cesar github account">
+					<img id="fotoPerfil" src="https://avatars3.githubusercontent.com/u/24551117?s=460&u=b0a1fadcaa2648d93954a6931760d293dec0571a&v=4" alt="Cesar profile picture in Github">
+					<h3> César García Cabeza</h3>
+					<p></p>
+				</section><section id="member3" class="col projectColumn rounded border-success" data-toggle="tooltip" data-placement="top" title="Iñigo github account">
+					<img id="fotoPerfil" src="https://avatars3.githubusercontent.com/u/33182089?s=460&u=8a2c0882117a6b2bbefecfd20218811df057dff5&v=4" alt="Iñigo profile picture in Github">
+					<h3> 
+						Íñigo Gutiérrez Fernández</h3>
+					<p></p>
 				
-			</section>
+				</section><section id="member4" class="col projectColumn rounded border-success" data-toggle="tooltip" data-placement="top" title="Álvaro github account">
+					<img id="fotoPerfil" src="https://avatars3.githubusercontent.com/u/60549153?s=460&v=4" alt="Alvaro profile picture in Github">
+					<h3> Álvaro García Infante</h3>
+					<p></p>
+				</section><section id="member5" class="col projectColumn rounded border-success" data-toggle="tooltip" data-placement="top" title="Pelayo github account">
+					<img id="fotoPerfil" src="https://avatars0.githubusercontent.com/u/60552259?s=460&v=4" alt="Pelayo profile picture in Github">
+					<h3>Pelayo García Álvarez</h3>
+					<p></p>
+				</section>
+				<section id="member6" class="col projectColumn rounded border-success" data-toggle="tooltip" data-placement="top" title="Eduardo github account">
+					<img id="fotoPerfil" src="images/yo.png" alt="Eduardo profile picture in Github">
+					<h3> Eduardo Lamas Suárez</h3>
+					<p></p>
+				</section>
 
 			</section>
 
 		</section>
-		<section id="PersonalBackground" class="GeneralSections">
-			<img id="fotoPerfil" src="images/yo.png" alt="Foto de Eduardo">
+
+		</section>
+		<section id="Manual" class="GeneralSections">
 			<h2 >Manual</h2>
-			
+			<ul>
+				<li> <a href="#WhatIsViade">What is ViadeApp? </a></li>
+				<li>How to use the ViadeApp?</li>
+					<ul>
+						<li><a href="#Logging">Logging in Viade</a></li>
+						<li><a href="#AddingRoute">Adding a route</a></li>
+						<li><a href="#DeletingRoute">Deleting a route</a></li>
+						<li><a href="#SharingRoute">Sharing a route</a></li>
+						<li><a href="#CommentingRoute">Commenting a route</a></li>
+						<li><a href="#VisitingFriend">Visiting friends profiles</a></li>
+						<li><a href="#MoreDetails">More details</a></li>
+
+					</ul>
+
+			</ul>
 		</section>
+		<section id="WhatIsViade"class="GeneralSections">
+			<h2>What is ViadeApp?</h2>
+			<p>
+				ViadeApp is an easy to use web application that helps you managing your routes. With this tool, you are able to add, delete and comment your own routes. 
+				Viade is not only a personal route manger for your routes, with our web application you can share your routes amoung your friends. 
+			</p>
+			<p> ViadeApp was create using the Solid technology, with helps securing your personal data in your own <a href="https://solid.inrupt.com/how-it-works">POD </a>.</p>
+		</section>
+		
+		<section id="Logging"class="GeneralSections">
+			<h2>Logging in ViadeApp</h2>
+			<p>In order to loggin the application you need to do the following steps:</p>
+			<ol>
+				<li>Go to <a href="https://arquisoft.github.io/viade_en1b" target="_blank">ViadeApp</a>.</li>
+				<img class="ManualPage" src="images/Loggin_page.png">
+				<li>Click on "Login here!", so a new pop up appear.</li>
+				<img class="ManualPage" src="images/popup.png">
+				<li>In here it only remains to choose a POD provider, where you need to have an account, and introduce you account details.</li>
+			</ol>
+		</section>
+
+		<section id="AddingRoute"class="GeneralSections">
+			<h2>Adding a route</h2>
+			<p>For adding a new route to ViadeApp you need to follow the next steps, after you are logged:</p>
+			<ol>
+				<li>Click on "Upload route" in the nav bar.</li>
+				<img class="ManualPage" src="images/navBar.png">
+				<li>Then, you need to full fill the following form. In here you need to click on the "Choose route" button, in order to upload a new route file in gpx format.</li>
+				<img class="ManualPage"  src="images/uploadForm.png">
+			</ol>
+		</section>
+		<section id="DeletingRoute"class="GeneralSections">
+			<h2>Deleting a route</h2>
+			<ol>
+				<li>For doing this you need to click on the "My routes" option of the nav bar. </li>
+				<img src="images/navBar.png"  class="ManualPage">
+				<li>Once all your routes are loaded, you click on the route that you want to delete.</li>
+				<li>Now, it only remains to click on the "Delete" button.</li>
+				<img src="images/MyRoutes.png"  class="ManualPage" >
+			</ol>
+		</section>
+		<section id="SharingRoute"class="GeneralSections">
+			<h2>Sharing a route</h2>
+			<ol>
+				<li>Click on the "My routes" option of the nav bar. </li>
+				<img src="images/navBar.png"  class="ManualPage" >
+				<li>Once all your routes are loaded, you click on the route that you want to comment.</li>
+				<li>Now, it only remains to click on the "Share " button.</li>
+				<img src="images/MyRoutes.png"  class="ManualPage" >
+				<li> Now, click on "Share" and choose your friend.</li>
+			</ol>
+		</section>
+		<section id="CommentingRoute"class="GeneralSections">
+			<h2>Commenting a route</h2>
+			<ol>
+				<li>Click on the "My routes" option of the nav bar. </li>
+				<img src="images/navBar.png"  class="ManualPage" >
+				<li>Once all your routes are loaded, you click on the route that you want to comment.</li>
+				<li>Now, it only remains to click on the "Comment" button.</li>
+				<img src="images/MyRoutes.png"  class="ManualPage" >
+				<li>A new pop up will appear, where you can write the new comment. When the comment is finished, it only remains to click on "Leave a comment"</li>
+				<img src="images/CommentPopup.png"  class="ManualPage" >
+			</ol>
+		</section>
+		<section id="VisitingFriend"class="GeneralSections">
+			<h2>Visiting friends progiles</h2>
+			<ol>
+				<li>Click on "My Profile" option of the navbar</li>
+				<img src="images/navBar2.png"  class="ManualPage" >
+				<li>Once your profile is loaded, you only need to click on the name of your friend.</li>
+				<img src="images/Profile.png"  class="ManualPage" >
+				<li>From your profile page of the viade app, you are also able to go to your own solid profile by clicking in "Solid profile"</li>
+			</ol>
+		</section>
+		<section id="MoreDetails"class="GeneralSections">
+			<h2>More details</h2>
+			<p>If you want to know more about the application, in a more technical level, 
+				you can go <a href="https://arquisoft.github.io/viade_en1b/docs/" target="_blank">HERE</a>.</p>
+		</section>
+
 		</main>
 		<footer>
 		</footer>
