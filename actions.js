@@ -21,7 +21,7 @@
                                                 });
                                         $("#Repository5").click(
                                                 function() {
-                                                        window.open("https://github.com/lamasumas/IrlCPC2018", "_blank").focus();
+                                                        window.open("https://github.com/lamasumas/TFG_Muestreo_Fauna", "_blank").focus();
 
                                                 });
                                         $("#Repository6").click(
@@ -33,7 +33,7 @@
                                         $(".fa-github-square").click( x =>  window.open("https://github.com/lamasumas", "_blank").focus());
                                         $(".fa-bitbucket").click( x =>  window.open("https://bitbucket.org/%7Ba64c1405-4267-441c-93a3-489cf8d269d5%7D/", "_blank").focus());
                                         $(".fa-twitter-square").click( x =>  window.open("https://twitter.com/Lamasumas1", "_blank").focus());
-
+                                        $(".fa-google-play").click( x =>  window.open("https://play.google.com/store/apps/developer?id=Lamasumas&hl=es&gl=US", "_blank").focus());
 
 
                                 });
