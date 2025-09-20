@@ -1,16 +1,5 @@
 
 
-@font-face {
-	font-family: "Aprilea";
-	src: url("fonts/Aprilea/Aprilea.woff");
-}
-
-@font-face{
-	font-family:"Champagne";
-	src: url("fonts/Champagne/Champagne_Limousines.woff");
-
-}
-
 * {
 	box-sizing: content-box;
 	font-family:"Champagne";
@@ -22,14 +11,7 @@ html{
 	
 }
 
-main {
-	margin: 10%;
-}
-section{
-	background-color:white;
-	
 
-}
 
 .projectColumn{
 
@@ -105,19 +87,7 @@ section{
 	margin-bottom: 3%;
 }
 
-footer{
-	text-align: center;
-	padding-bottom: 2%;
-}
 
-footer > i {
-	width: 10%;
-	height: 10%;
-	font-size: 200%;
-	margin-right: 2%;
-	margin-left: 2%;
-	cursor: pointer;
-}
 
 
 

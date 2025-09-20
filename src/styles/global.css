@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Aprilea";
+  src: url("fonts/Aprilea/Aprilea.woff");
+}
+
+@font-face {
+  font-family: "Champagne";
+  src: url("fonts/Champagne/Champagne_Limousines.woff");
+}
