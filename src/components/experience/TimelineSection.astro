@@ -44,13 +44,15 @@ const borderClass = position == "left" ? "border-r-2 border-dashed" : "";
 
     // Handle clicks on each button.
     cards.forEach((card) => {
+      const htmlCard = card as HTMLElement;
       card.addEventListener("click", () => {
-        if (card.dataset.url) window.open(card.dataset.url, "_blank");
+        if (htmlCard.dataset.url) window.open(htmlCard.dataset.url, "_blank");
       });
     });
   </script>
 
   <style>
+    @reference "tailwindcss";
     .work-position {
       position: relative;
     }
