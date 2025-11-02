@@ -1,15 +1,16 @@
 @import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
 
 @font-face {
-  font-family: "Aprilea";
-  src: url("fonts/Aprilea/Aprilea.woff");
+    font-family: "Aprilea";
+    src: url("fonts/Aprilea/Aprilea.woff");
 }
 
 @font-face {
-  font-family: "Champagne";
-  src: url("fonts/Champagne/Champagne_Limousines.woff");
+    font-family: "Champagne";
+    src: url("fonts/Champagne/Champagne_Limousines.woff");
 }
 
 .section-title {
-  font-family: "Champagne";
+    font-family: "Champagne";
 }

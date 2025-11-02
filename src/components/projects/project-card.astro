@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  technologies: string[];
+  url: string;
+}
+
+const { title, description, technologies, url } = Astro.props;
+---
+
+<a
+  class="flex flex-col gap-2 border w-full p-3 rounded-sm cursor-pointer hover:animate-tilt"
+  href={url}
+  target="_blank"
+>
+  <div class="font-bold">{title}</div>
+  <div class="flex flex-col">
+    <p>
+      {description}
+    </p>
+    <p>
+      Technologies: {
+        technologies.map((tech, index) => (
+          <>
+            <em>{tech}</em>
+            {index < technologies.length - 1 ? ", " : ""}
+          </>
+        ))
+      }
+    </p>
+  </div>
+</a>
