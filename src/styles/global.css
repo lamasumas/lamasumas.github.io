@@ -3,14 +3,18 @@
 
 @font-face {
     font-family: "Aprilea";
-    src: url("fonts/Aprilea/Aprilea.woff");
+    src: url("/fonts/Aprilea/Aprilea.woff") format("woff");
 }
 
 @font-face {
     font-family: "Champagne";
-    src: url("fonts/Champagne/Champagne_Limousines.woff");
+    src: url("/fonts/Champagne/Champagne_Limousines.woff") format("woff");
 }
 
 .section-title {
     font-family: "Champagne";
+}
+
+html {
+    scroll-behavior: smooth;
 }

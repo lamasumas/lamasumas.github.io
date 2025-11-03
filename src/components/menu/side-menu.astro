@@ -25,10 +25,12 @@ import about from "../../assets/about.svg";
     if (window.scrollY > 100) {
       // Show sidebar after scrolling 50px
       sidebar.classList.remove("exit");
+      void sidebar.offsetWidth;
       sidebar.classList.add("enter");
     } else {
       // Hide sidebar if back at top
       sidebar.classList.remove("enter");
+      void sidebar.offsetWidth;
       sidebar.classList.add("exit");
     }
   });
