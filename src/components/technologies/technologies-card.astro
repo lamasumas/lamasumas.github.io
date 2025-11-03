@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  logos: Logo[];
+}
+
+export interface Logo {
+  src: string;
+  title: string;
+  alt?: string;
+}
+
+const { title, logos } = Astro.props;
+---
+
+<div
+  class="card-container relative border-2 border-black rounded-lg pt-8 w-full max-w-md"
+>
+  <div
+    class="card-title absolute -top-4 left-4 bg-white px-2 text-2xl font-bold"
+  >
+    {title}
+  </div>
+  <div
+    class="card-content grid grid-cols-2 gap-4 place-items-center p-4 h-full"
+  >
+    {
+      logos.map((logo) => (
+        <img
+          src={logo.src}
+          alt={logo.alt ?? logo.title}
+          class="w-18 h-18 sm:w-24 sm:h-24 object-contain"
+          title={logo.title}
+        />
+      ))
+    }
+  </div>
+</div>

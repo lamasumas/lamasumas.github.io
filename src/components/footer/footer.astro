@@ -1,0 +1,31 @@
+---
+import linkedinLogo from "../../assets/linkedin.svg";
+import emailLogo from "../../assets/email.svg";
+import githubLogo from "../../assets/github.svg";
+import instagramLogo from "../../assets/instagram.svg";
+import { Image } from "astro:assets";
+import IconLink from "./footer-icon.astro";
+---
+
+<footer class="flex gap-20 md:gap-50 justify-center items-center p-2">
+  <IconLink
+    link="https://github.com/lamasumas"
+    icon={githubLogo}
+    text="Github"
+  />
+  <IconLink
+    link="https://www.linkedin.com/in/elamasu/"
+    icon={linkedinLogo}
+    text="Linkedin"
+  />
+  <IconLink
+    link="https://www.instagram.com/the_hidden_spanish/"
+    icon={instagramLogo}
+    text="Instagram"
+  />
+  <IconLink
+    link="mailto:navesllanes@gamil.com"
+    icon={emailLogo}
+    text="Contact me"
+  />
+</footer>

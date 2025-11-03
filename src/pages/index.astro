@@ -1,0 +1,23 @@
+---
+import Experience from "../components/experience/experience.astro";
+import MainMenu from "../components/homepage/homepage.astro";
+import Technologies from "../components/technologies/technologies.astro";
+import MyProjects from "../components/projects/my-projects.astro";
+import Layout from "../layouts/layout.astro";
+import SideMenu from "../components/menu/side-menu.astro";
+import AboutMe from "../components/about/about.astro";
+import Footer from "../components/footer/footer.astro";
+---
+
+<Layout>
+  <div class="flex">
+    <SideMenu />
+    <div class="flex flex-col gap-4 flex-1">
+      <MainMenu />
+      <Experience />
+      <Technologies />
+      <MyProjects />
+      <AboutMe />
+    </div>
+  </div>
+</Layout>

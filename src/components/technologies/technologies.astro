@@ -1,0 +1,72 @@
+---
+import javaLogo from "../../assets/java.svg";
+import typescriptLogo from "../../assets/typescript.svg";
+import angularLogo from "../../assets/angular.svg";
+import springLogo from "../../assets/spring.svg";
+import sqlLiteLogo from "../../assets/sqlite.svg";
+import pythonLogo from "../../assets/python.svg";
+
+import reactLogo from "../../assets/react_light.svg";
+import tailwindLogo from "../../assets/tailwindcss.svg";
+import postgresqlLogo from "../../assets/postgresql.svg";
+import mongodbLogo from "../../assets/mongodb-icon-light.svg";
+import rLogo from "../../assets/r.svg";
+
+import astroLogo from "../../assets/astro.svg";
+import supabaseLogo from "../../assets/supabase.svg";
+import dockerLogo from "../../assets/docker.svg";
+import kubernetesLogo from "../../assets/kubernetes.svg";
+import kotlinLogo from "../../assets/kotlin.svg";
+import type { Logo } from "./technologies-card.astro";
+import Card from "./technologies-card.astro";
+
+const expertLogos: Logo[] = [
+  { src: javaLogo.src, title: "Java", alt: "Java logo" },
+  { src: typescriptLogo.src, title: "TypeScript", alt: "TypeScript logo" },
+  { src: angularLogo.src, title: "Angular", alt: "Angular logo" },
+  { src: springLogo.src, title: "Spring", alt: "Spring logo" },
+  { src: sqlLiteLogo.src, title: "SQLite", alt: "SQLite logo" },
+  { src: pythonLogo.src, title: "Python", alt: "Python logo" },
+];
+
+const proficientLogos: Logo[] = [
+  { src: reactLogo.src, title: "React", alt: "React logo" },
+  { src: tailwindLogo.src, title: "Tailwind", alt: "Tailwind CSS logo" },
+  { src: postgresqlLogo.src, title: "PostgreSQL", alt: "PostgreSQL logo" },
+  { src: mongodbLogo.src, title: "MongoDB", alt: "MongoDB logo" },
+  { src: rLogo.src, title: "R", alt: "R logo" },
+];
+
+const familiarLogos: Logo[] = [
+  { src: astroLogo.src, title: "Astro", alt: "Astro logo" },
+  { src: supabaseLogo.src, title: "Supabase", alt: "Supabase logo" },
+  { src: dockerLogo.src, title: "Docker", alt: "Docker logo" },
+  { src: kubernetesLogo.src, title: "Kubernetes", alt: "Kubernetes logo" },
+  { src: kotlinLogo.src, title: "Kotlin", alt: "Kotlin logo" },
+];
+---
+
+<section
+  id="myTechStack"
+  class="pt-10 gap-14 flex flex-col min-h-dvh md:w-full"
+>
+  <div class="text-5xl flex justify-center section-title">My Tech Stack</div>
+
+  <div class="w-full flex justify-center flex-col items-center">
+    <div
+      class="w-full justify-center flex flex-col md:flex-row md:align-middle
+        items-center gap-8"
+    >
+      <!-- Expert -->
+      <Card title="Expert" logos={expertLogos} />
+      <div
+        class="flex flex-col w-full max-w-lg gap-8 justify-center items-center"
+      >
+        <!-- Proficient -->
+        <Card title="Proficient" logos={proficientLogos} />
+        <!-- Familiar -->
+        <Card title="Familiar" logos={familiarLogos} />
+      </div>
+    </div>
+  </div>
+</section>

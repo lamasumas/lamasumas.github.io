@@ -1,0 +1,77 @@
+---
+import ProjectCard from "./project-card.astro";
+
+const projects = [
+  {
+    url: "https://github.com/lamasumas/lamasumas.github.io",
+    title: "Portafolio Webpage",
+    description:
+      "This webpage, a profesional portafolio to showcase my work and my carreer. github pages.",
+    technologies: ["Astro", "Tailwind CSS"],
+  },
+  {
+    url: "https://github.com/lamasumas/Machine_Learning",
+    title: "Machine Learning Implementations",
+    description:
+      "The implementation of different machine learning algorithms, in order to practice and learn about this field.",
+    technologies: [
+      "Python",
+      "Java",
+      "Algorithm",
+      "Processing",
+      "Javascript",
+      "AI",
+    ],
+  },
+  {
+    url: "https://github.com/lamasumas/Geofauna",
+    title: "GeoFauna",
+    description:
+      "Phone application for helping biologists to record animals sightseeings along with environmental data. In addition to the app, there is an additional companion microcontroller for recording this extra data.",
+    technologies: ["Kotlin", "Android", "ESP32", "Microcontroller", "C++"],
+  },
+
+  {
+    url: "https://github.com/lamasumas/A-_Java",
+    title: "A* Visualizer",
+    description:
+      "An implementation of the A* algorithm, with an interactive interface to play around.",
+    technologies: ["Java", "Algorithm", "Processing"],
+  },
+  {
+    url: "https://github.com/lamasumas/ECCO",
+    title: "ECCO Green House Gas Emissions Calculator",
+    description:
+      "Energy Community Co-Operatives (ECCO), was an European project aimed to promote the adoption of renowable energies in small communities. This project was a module of the One-Stop shop developed for this project, which help the user calculate the ammount of CO2 produced in the implementation of one of the renowable energy option ",
+    technologies: ["Javascript", "HTML", "CSS", "Docker"],
+  },
+  {
+    url: "https://github.com/lamasumas/PythonPersonalProjects",
+    title: "Python Scripts",
+    description:
+      "Different scripts created in python that cover different topics/necessities I had. From a Reddit wallpaper liked post downloader, to machine learning",
+    technologies: ["Python", "AI"],
+  },
+];
+---
+
+<section
+  id="myProjects"
+  class="w-full min-h-dvh flex flex-col items-center gap-13 p-3"
+>
+  <div class="text-5xl flex section-title justify-center">My Side-Projects</div>
+  <div
+    class="flex flex-col gap-4 justify-start items-stretch max-w-3xl flex-1 overflow-auto scroll-smooth max-h-[calc(100vh-8rem)]"
+  >
+    {
+      projects.map((project) => (
+        <ProjectCard
+          url={project.url}
+          title={project.title}
+          description={project.description}
+          technologies={project.technologies}
+        />
+      ))
+    }
+  </div>
+</section>
