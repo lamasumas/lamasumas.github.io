@@ -11,7 +11,7 @@
   "dependencies": {
     "@midudev/tailwind-animations": "^0.2.0",
     "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.9",
+    "astro": "^5.14.3",
     "sass": "^1.93.0",
     "tailwindcss": "^4.1.13"
   },
