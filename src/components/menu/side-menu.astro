@@ -1,0 +1,47 @@
+---
+import SectionLink from "./section-link.astro";
+import briefcase from "../../assets/briefcasel.svg";
+import techStack from "../../assets/cpu.svg";
+import projects from "../../assets/folder.svg";
+import about from "../../assets/about.svg";
+---
+
+<aside
+  id="sidebar"
+  class="flex flex-col gap-5 z-50 h-screen fixed top-0 bg-transparent items-center justify-center p-4 opacity-0 transition-opacity duration-500"
+>
+  <div class="flex flex-col bg-gray-700/60 py-7 px-4 rounded-xl gap-7">
+    <SectionLink icon={briefcase} link="#myExperience" text="My Experience" />
+    <SectionLink icon={techStack} link="#myTechStack" text="My Tech Stack" />
+    <SectionLink icon={projects} link="#myProjects" text="My Projects" />
+    <SectionLink icon={about} link="#aboutMe" text="About Me" />
+  </div>
+</aside>
+
+<script type="module">
+  const sidebar = document.getElementById("sidebar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      // Show sidebar after scrolling 50px
+      sidebar.classList.remove("exit");
+      sidebar.classList.add("enter");
+    } else {
+      // Hide sidebar if back at top
+      sidebar.classList.remove("enter");
+      sidebar.classList.add("exit");
+    }
+  });
+</script>
+
+<style>
+  .enter {
+    opacity: 100;
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+
+  .exit {
+    opacity: 0;
+    animation: slide-out-left 0.5s ease-out forwards;
+  }
+</style>

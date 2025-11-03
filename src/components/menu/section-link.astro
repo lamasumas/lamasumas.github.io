@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  link: string;
+  icon?: any;
+  text: string;
+}
+
+const { icon, link, text } = Astro.props;
+---
+
+<a
+  class="text-xl text-gray-100 font-semibold gap-5 flex cursor-pointer hover:animate-jelly"
+  href={link}
+>
+  {
+    icon ? (
+      <Image src={icon} title={text} class="w-8 h-8 text-white" alt={text} />
+    ) : (
+      text
+    )
+  }
+</a>

@@ -1,0 +1,49 @@
+---
+import profilepic from "../../assets/profile.jpg";
+import Footer from "../footer/footer.astro";
+---
+
+<section
+  id="aboutMe"
+  class="min-h-dvh w-full items-center flex gap-13 flex-col"
+>
+  <div class="text-5xl flex justify-center section-title">About Me</div>
+  <div class="h-fit bg-gray-200 p-7 rounded-xl gap-7 flex-col flex">
+    <div class="flex justify-center align-center items-baseline">
+      <img
+        src={profilepic.src}
+        class="w-60 h-60 rounded-full border-4 border-gray-900 justify-center align-center items-center"
+      />
+    </div>
+    <div class="flex flex-col gap-3 items-center">
+      <div class="flex max-w-4xl flex-col gap-4">
+        <p>
+          Hi! I'm Eduardo Lamas Suárez, a Full Stack Software Engineer from
+          Spain, currently based in Tokyo. Over the years, I've had the chance
+          to live and work in Spain, Ireland, Switzerland, and Japan, and
+          contribute to projects at <strong>CERN</strong> and the European initiative
+          <strong>ECCO</strong>.
+        </p>
+        <p>
+          Right now, I'm working at <strong>Tap.co.jp</strong> as a Fullstack Engineer,
+          building web applications using <strong>Java Spring</strong> and
+          <strong>Angular with TypeScript</strong>. I enjoy creating useful and
+          creative applications, experimenting with new technologies, and
+          learning by building.
+        </p>
+        <p>
+          Outside of coding, I love photography, long city photo walks, going to
+          the gym, and taking part in hackathons (I even won my first one at
+          CIT). I also speak fluent English, basic French, and basic Japanese —
+          which I started learning during the COVID lockdown while working at
+          Merkle as a Java programmer analyst.
+        </p>
+        <p>
+          Always happy to connect — feel free to say hi or reach out if you have
+          a project in mind!
+        </p>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</section>
