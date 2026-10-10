@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /secret/
 
 Sitemap: https://lamasumas.github.io/sitemap.xml

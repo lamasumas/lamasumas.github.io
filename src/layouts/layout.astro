@@ -79,6 +79,24 @@ const personSchema = {
     <main id="content">
       <slot />
     </main>
+
+    <script>
+      // ponytail: ↑ ↓ → ← unlocks the plain-HTML easter egg
+      const sequence = ["ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft"];
+      let i = 0;
+      window.addEventListener("keydown", (event) => {
+        if (event.repeat) return;
+        if (event.key === sequence[i]) {
+          i++;
+          if (i === sequence.length) {
+            i = 0;
+            window.location.href = "/secret/index.html";
+          }
+        } else {
+          i = event.key === sequence[0] ? 1 : 0;
+        }
+      });
+    </script>
   </body>
 </html>
 
