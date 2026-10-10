@@ -12,19 +12,20 @@ interface Props {
 const { position, company, content, date, role, technologies, url } =
   Astro.props;
 
-const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
+const borderClass =
+  position === "left" ? "@3xl:border-r-2 @3xl:border-dashed" : "";
 ---
 
 <div class="flex w-full">
   {
     position === "right" ? (
-      <div class="hidden flex-1 border-r-2 border-dashed border-black md:block" />
+      <div class="hidden flex-1 border-r-2 border-dashed border-black @3xl:block" />
     ) : null
   }
 
   <div
     class:list={[
-      "work-position relative flex flex-1 flex-col border-l-2 border-dashed border-black p-3 pl-6 md:max-w-1/2 md:border-l-0 md:pl-3",
+      "work-position relative flex flex-1 flex-col border-l-2 border-dashed border-black p-2 pl-4 @3xl:max-w-1/2 @3xl:border-l-0 @3xl:pl-2",
       position,
       borderClass,
     ]}
@@ -33,7 +34,7 @@ const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
       href={url}
       target={url ? "_blank" : undefined}
       rel={url ? "noopener noreferrer" : undefined}
-      class="info-card block w-full max-w-md rounded-md p-2 hover:outline-blue-500 transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-blue-500"
+      class="info-card block w-full max-w-md rounded-md p-1.5 hover:outline-blue-500 transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-blue-500"
     >
       <div class="flex items-baseline justify-between gap-2">
         <div><b>{company}</b> - <em>{role}</em></div>
@@ -53,7 +54,7 @@ const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
     </a>
   </div>
 
-  {position === "left" ? <div class="hidden flex-1 md:block" /> : null}
+  {position === "left" ? <div class="hidden flex-1 @3xl:block" /> : null}
 </div>
 
 <style>
@@ -105,7 +106,7 @@ const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
     }
   }
 
-  @media (width < 48rem) {
+  @container (width < 48rem) {
     .left,
     .right {
       align-items: stretch;
@@ -117,7 +118,7 @@ const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
     }
   }
 
-  @media (width >= 48rem) {
+  @container (width >= 48rem) {
     .right {
       align-items: flex-start;
     }

@@ -17,58 +17,79 @@ import supabaseLogo from "../../assets/supabase.svg";
 import dockerLogo from "../../assets/docker.svg";
 import kubernetesLogo from "../../assets/kubernetes.svg";
 import kotlinLogo from "../../assets/kotlin.svg";
-import type { Logo } from "./technologies-card.astro";
-import Card from "./technologies-card.astro";
 
-const expertLogos: Logo[] = [
-  { src: javaLogo.src, title: "Java", alt: "Java logo" },
-  { src: typescriptLogo.src, title: "TypeScript", alt: "TypeScript logo" },
-  { src: angularLogo.src, title: "Angular", alt: "Angular logo" },
-  { src: springLogo.src, title: "Spring", alt: "Spring logo" },
-  { src: sqlLiteLogo.src, title: "SQLite", alt: "SQLite logo", size: "md" },
-  { src: pythonLogo.src, title: "Python", alt: "Python logo" },
-];
+interface Logo {
+  src: string;
+  title: string;
+}
 
-const proficientLogos: Logo[] = [
-  { src: reactLogo.src, title: "React", alt: "React logo" },
-  { src: tailwindLogo.src, title: "Tailwind", alt: "Tailwind CSS logo" },
-  { src: postgresqlLogo.src, title: "PostgreSQL", alt: "PostgreSQL logo" },
-  { src: mongodbLogo.src, title: "MongoDB", alt: "MongoDB logo" },
-  { src: rLogo.src, title: "R", alt: "R logo" },
-];
-
-const familiarLogos: Logo[] = [
-  { src: astroLogo.src, title: "Astro", alt: "Astro logo", size: "md" },
-  { src: supabaseLogo.src, title: "Supabase", alt: "Supabase logo" },
-  { src: dockerLogo.src, title: "Docker", alt: "Docker logo" },
-  { src: kubernetesLogo.src, title: "Kubernetes", alt: "Kubernetes logo" },
-  { src: kotlinLogo.src, title: "Kotlin", alt: "Kotlin logo" },
+const groups: { title: string; logos: Logo[] }[] = [
+  {
+    title: "Expert",
+    logos: [
+      { src: javaLogo.src, title: "Java" },
+      { src: typescriptLogo.src, title: "TypeScript" },
+      { src: angularLogo.src, title: "Angular" },
+      { src: springLogo.src, title: "Spring" },
+      { src: sqlLiteLogo.src, title: "SQLite" },
+      { src: pythonLogo.src, title: "Python" },
+      { src: reactLogo.src, title: "React" },
+    ],
+  },
+  {
+    title: "Proficient",
+    logos: [
+      { src: tailwindLogo.src, title: "Tailwind" },
+      { src: postgresqlLogo.src, title: "PostgreSQL" },
+      { src: mongodbLogo.src, title: "MongoDB" },
+      { src: rLogo.src, title: "R" },
+      { src: astroLogo.src, title: "Astro" },
+    ],
+  },
+  {
+    title: "Familiar",
+    logos: [
+      { src: supabaseLogo.src, title: "Supabase" },
+      { src: dockerLogo.src, title: "Docker" },
+      { src: kubernetesLogo.src, title: "Kubernetes" },
+      { src: kotlinLogo.src, title: "Kotlin" },
+    ],
+  },
 ];
 ---
 
 <section
   id="myTechStack"
-  class="w-full flex flex-col gap-8 px-4 py-16 sm:py-24"
+  class="@container w-full flex flex-col gap-5 max-w-xl"
 >
-  <h2 class="text-4xl md:text-5xl flex justify-center section-title">
+  <h2 class="text-3xl md:text-4xl flex justify-center section-title">
     My Tech Stack
   </h2>
 
-  <div class="w-full flex justify-center flex-col items-center">
-    <div
-      class="w-full justify-center flex flex-col md:flex-row md:align-middle
-        items-center gap-8"
-    >
-      <!-- Expert -->
-      <Card title="Expert" logos={expertLogos} />
-      <div
-        class="flex flex-col w-full max-w-lg gap-8 justify-center items-center"
-      >
-        <!-- Proficient -->
-        <Card title="Proficient" logos={proficientLogos} />
-        <!-- Familiar -->
-        <Card title="Familiar" logos={familiarLogos} />
-      </div>
-    </div>
+  <div class="flex flex-col gap-5">
+    {
+      groups.map(({ title, logos }) => (
+        <div class="flex flex-col gap-2">
+          <h3 class="text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
+            {title}
+          </h3>
+          <ul class="flex flex-wrap gap-2">
+            {logos.map((logo) => (
+              <li class="flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 py-1 pl-1.5 pr-3">
+                <img
+                  src={logo.src}
+                  alt=""
+                  loading="lazy"
+                  class="h-5 w-5 shrink-0 object-contain"
+                />
+                <span class="text-sm font-medium text-gray-800">
+                  {logo.title}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
   </div>
 </section>
