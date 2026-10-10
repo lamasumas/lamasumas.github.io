@@ -1,64 +1,89 @@
 ---
-
+const navLinks = [
+  { href: "#myExperience", long: "My Experience", short: "Career" },
+  { href: "#myTechStack", long: "My Tech Stack", short: "Stack" },
+  { href: "#myProjects", long: "My Projects", short: "Creations" },
+  { href: "#aboutMe", long: "About Me", short: "Bio" },
+];
 ---
 
 <section
-  class="min-h-dvh w-full gap-5 justify-center items-center bg-blend-multiply flex bg-[url(../assets/background.jpg)] bg-center bg-no-repeat bg-cover flex-col"
+  class="relative isolate flex min-h-dvh w-full flex-col items-center justify-center gap-6 overflow-hidden bg-[url(../assets/background.jpg)] bg-cover bg-center bg-no-repeat px-4"
 >
   <div
-    class="rounded-2xl p-8 sm:p-12 shadow-2xl items-center flex flex-col gap-5"
+    class="absolute inset-0 -z-10 bg-gradient-to-b from-black/80 via-black/45 to-black/85"
   >
-    <div class="flex flex-col gap-3 items-center">
-      <div class="flex flex-col">
-        <h1
-          class="text-[40px] sm:text-[80px] main-title text-center text-gray-200"
-        >
-          Eduardo Lamas Suárez
-        </h1>
-        <h5
-          class="text-[30px] sm:text-[50px] text-center main-subtitle text-gray-200"
-        >
-          Full Stack Engineer
-        </h5>
-      </div>
-      <div
-        class="flex flex-wrap items-center justify-center text-base sm:text-xl max-w-4xl bg-gray-700/60 px-4 py-2 sm:px-8 sm:py-4 rounded-lg gap-3 sm:gap-10"
-      >
-        <a
-          href="#myExperience"
-          class="text-gray-100 font-medium cursor-pointer hover:animate-tilt flex items-center"
-        >
-          <span class="hidden lg:block"> My Experience</span>
-          <span class="block lg:hidden"> Career</span>
-        </a>
-        <hr class="hidden h-full border border-gray-900 sm:block" />
-        <a
-          href="#myTechStack"
-          class="text-gray-100 font-medium cursor-pointer hover:animate-tilt flex items-center"
-        >
-          <span class="hidden lg:block"> My Tech Stack</span>
-          <span class="block lg:hidden"> Stack</span>
-        </a>
-        <hr class="hidden h-full border border-gray-900 sm:block" />
-        <a
-          href="#myProjects"
-          class="text-gray-100 font-medium cursor-pointer hover:animate-tilt flex items-center"
-        >
-          <span class="hidden lg:block"> My Projects</span>
-          <span class="block lg:hidden"> Creations</span>
-        </a>
-
-        <hr class="hidden h-full border border-gray-900 sm:block" />
-        <a
-          href="#aboutMe"
-          class="text-gray-100 font-medium cursor-pointer hover:animate-tilt flex items-center"
-        >
-          <span class="hidden lg:block"> About Me</span>
-          <span class="block lg:hidden"> Bio</span>
-        </a>
-      </div>
-    </div>
   </div>
+  <div
+    class="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-500/10 blur-3xl"
+  >
+  </div>
+
+  <div
+    class="flex w-full max-w-3xl flex-col items-center gap-7 rounded-3xl border border-white/10 bg-black/30 px-6 py-10 text-center shadow-2xl backdrop-blur-md sm:px-12 sm:py-14 animate-fade-in animate-duration-slow"
+  >
+    <div
+      class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-gray-200 sm:text-sm animate-fade-in-down animate-delay-100"
+    >
+      <span class="relative flex h-2 w-2">
+        <span
+          class="ping-ring absolute inline-flex h-full w-full rounded-full bg-emerald-400"
+        ></span>
+        <span
+          class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+      </span>
+      Based in Tokyo · Open to opportunities
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <h1
+        class="text-4xl sm:text-7xl main-title text-center text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] animate-fade-in-up animate-delay-200"
+      >
+        Eduardo Lamas Suárez
+      </h1>
+      <h5
+        class="text-xl uppercase tracking-[0.2em] sm:text-4xl main-subtitle text-center text-amber-200/90 animate-fade-in-up animate-delay-300"
+      >
+        Full Stack Engineer
+      </h5>
+    </div>
+
+    <nav
+      class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 animate-fade-in-up animate-delay-500"
+    >
+      {
+        navLinks.map(({ href, long, short }) => (
+          <a
+            href={href}
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-100 transition-colors hover:border-amber-300/40 hover:bg-white/10 hover:text-white sm:text-base"
+          >
+            <span class="hidden lg:inline">{long}</span>
+            <span class="lg:hidden">{short}</span>
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+
+  <a
+    href="#myExperience"
+    aria-label="Scroll to experience"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-300 transition-colors hover:text-white animate-fade-in animate-delay-1000"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="scroll-cue h-8 w-8"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="1.5"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+    </svg>
+  </a>
 </section>
 
 <style>
@@ -68,5 +93,40 @@
 
   .main-subtitle {
     font-family: "Champagne";
+  }
+
+  .ping-ring {
+    animation: ping-ring 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping-ring {
+    75%,
+    100% {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+
+  .scroll-cue {
+    animation: scroll-cue 1.8s ease-in-out infinite;
+  }
+
+  @keyframes scroll-cue {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translateY(8px);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ping-ring,
+    .scroll-cue {
+      animation: none;
+    }
   }
 </style>
