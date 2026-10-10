@@ -3,10 +3,25 @@ import { Image } from "astro:assets";
 import background from "../../assets/background.jpg";
 
 const navLinks = [
-  { href: "#myExperience", long: "My Experience", short: "Career" },
-  { href: "#myTechStack", long: "My Tech Stack", short: "Stack" },
-  { href: "#myProjects", long: "My Projects", short: "Creations" },
-  { href: "#aboutMe", long: "About Me", short: "Bio" },
+  {
+    href: "#myTechStack",
+    long: "My Tech Stack",
+    short: "Tech Stack",
+    mobileOnly: true,
+  },
+  {
+    href: "#myExperience",
+    long: "My Experience",
+    short: "Career",
+    mobileOnly: false,
+  },
+  {
+    href: "#myProjects",
+    long: "My Projects",
+    short: "Projects",
+    mobileOnly: true,
+  },
+  { href: "#aboutMe", long: "About Me", short: "Bio", mobileOnly: false },
 ];
 ---
 
@@ -53,7 +68,7 @@ const navLinks = [
       <h1
         class="text-4xl sm:text-7xl main-title text-center text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] animate-fade-in-up animate-delay-200"
       >
-        Eduardo Lamas Suárez
+        Eduardo<br class="sm:hidden" /> Lamas Suárez
       </h1>
       <p
         class="text-xl uppercase tracking-[0.2em] sm:text-4xl main-subtitle text-center text-amber-200/90 animate-fade-in-up animate-delay-300"
@@ -66,13 +81,16 @@ const navLinks = [
       class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 animate-fade-in-up animate-delay-500"
     >
       {
-        navLinks.map(({ href, long, short }) => (
+        navLinks.map(({ href, long, short, mobileOnly }) => (
           <a
             href={href}
-            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-100 transition-colors hover:border-amber-300/40 hover:bg-white/10 hover:text-white sm:text-base"
+            class:list={[
+              "rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-100 transition-colors hover:border-amber-300/40 hover:bg-white/10 hover:text-white sm:text-base",
+              mobileOnly && "md:hidden",
+            ]}
           >
-            <span class="hidden lg:inline">{long}</span>
-            <span class="lg:hidden">{short}</span>
+            <span class="hidden md:inline">{long}</span>
+            <span class="md:hidden">{short}</span>
           </a>
         ))
       }

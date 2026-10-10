@@ -9,11 +9,11 @@ import about from "../../assets/about.svg";
 <aside
   id="sidebar"
   inert
-  class="pointer-events-none fixed bottom-0 left-0 z-50 flex w-full flex-row items-center justify-center p-2 opacity-0 transition-opacity duration-500 md:top-0 md:bottom-auto md:h-screen md:w-auto md:flex-col md:p-4"
+  class="pointer-events-none fixed bottom-0 left-0 z-50 flex w-full flex-row items-center justify-center opacity-0 transition-opacity duration-500 md:hidden"
 >
   <nav
     aria-label="Section navigation"
-    class="flex w-full flex-row justify-around gap-4 rounded-t-xl bg-black/60 px-4 py-3 backdrop-blur-sm md:w-auto md:flex-col md:justify-center md:gap-7 md:rounded-xl md:py-7"
+    class="flex w-full flex-row justify-around gap-4 rounded-t-xl bg-black/60 px-4 py-3 backdrop-blur-sm"
   >
     <SectionLink icon={briefcase} link="#myExperience" text="My Experience" />
     <SectionLink icon={techStack} link="#myTechStack" text="My Tech Stack" />
@@ -43,11 +43,11 @@ import about from "../../assets/about.svg";
   .enter {
     opacity: 1;
     pointer-events: auto;
-    animation: slide-in-left 0.5s ease-out forwards;
+    animation: slide-in-bottom 0.5s ease-out forwards;
   }
 
   .exit {
     opacity: 0;
-    animation: slide-out-left 0.5s ease-out forwards;
+    animation: slide-out-bottom 0.5s ease-out forwards;
   }
 </style>

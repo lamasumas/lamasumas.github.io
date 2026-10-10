@@ -21,8 +21,8 @@ const projects = [
     ],
   },
   {
-    url: "https://github.com/lamasumas/agora",
-    title: "Agora",
+    url: "https://github.com/lamasumas/AI-Agora",
+    title: "AI Agora",
     description:
       "Self-hosted personal workspace for notes, finances, kanban boards and scheduled cron tasks, built from the ground up to be shared with a personal AI agent such as Hermes, OpenClaw or Claude Code.",
     technologies: [
@@ -126,13 +126,13 @@ const projects = [
 
 <section
   id="myProjects"
-  class="w-full flex flex-col items-center gap-8 px-4 py-16 sm:py-24"
+  class="w-full flex flex-col gap-5 min-h-0 max-h-130"
 >
-  <h2 class="text-4xl md:text-5xl flex section-title justify-center">
+  <h2 class="text-3xl md:text-4xl flex section-title justify-center">
     My Side-Projects
   </h2>
   <div
-    class="flex w-full max-w-3xl flex-1 flex-col items-stretch justify-start gap-4 md:max-h-[calc(100vh-8rem)] md:overflow-auto md:scroll-smooth"
+    class="flex w-full flex-col gap-4 flex-1 min-h-0 overflow-y-auto lg:pr-2"
   >
     {
       projects.map((project) => (

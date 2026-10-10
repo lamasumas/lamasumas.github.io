@@ -13,19 +13,29 @@ import AboutMe from "../components/about/about.astro";
     <SideMenu />
     <div class="flex flex-1 flex-col gap-4 pb-20 md:pb-0">
       <MainMenu />
-      <div
-        class="flex flex-col items-center gap-6 px-6 py-14 sm:items-center sm:px-10 sm:py-20 lg:flex-row lg:items-start lg:justify-center lg:gap-4"
-      >
+      <div class="px-6 py-14 sm:px-10 sm:py-20">
         <div
-          class="w-full flex max-w-md justify-center lg:max-w-3xl order-2 lg:order-1"
+          class="relative flex flex-col items-center gap-6 lg:grid lg:grid-cols-2 lg:items-start lg:gap-4"
         >
-          <Experience />
-        </div>
-        <div class="w-full flex justify-center lg:max-w-md order-1 lg:order-2">
-          <Technologies />
+          <div
+            class="contents lg:flex lg:flex-col lg:gap-10 lg:order-2 lg:max-w-none"
+          >
+            <div
+              class="order-1 w-full flex justify-center max-w-md lg:max-w-none"
+            >
+              <Technologies />
+            </div>
+            <div class="order-3 w-full max-w-md lg:max-w-none">
+              <MyProjects />
+            </div>
+          </div>
+          <div
+            class="order-2 lg:order-1 w-full flex max-w-md justify-center lg:max-w-none"
+          >
+            <Experience />
+          </div>
         </div>
       </div>
-      <MyProjects />
       <AboutMe />
     </div>
   </div>
