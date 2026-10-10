@@ -29,32 +29,32 @@ const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
       borderClass,
     ]}
   >
-    <div
-      class="hover:outline-black hover:outline-3 info-card w-full max-w-md rounded-md p-2 hover:cursor-pointer"
-      data-url={url}
+    <a
+      href={url}
+      target={url ? "_blank" : undefined}
+      rel={url ? "noopener noreferrer" : undefined}
+      class="info-card block w-full max-w-md rounded-md p-2 hover:outline-blue-500 transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-blue-500"
     >
-      <div><b>{company}</b> - <em>{role}</em></div>
+      <div class="flex items-baseline justify-between gap-2">
+        <div><b>{company}</b> - <em>{role}</em></div>
+        {
+          url ? (
+            <span aria-hidden="true" class="text-xs text-gray-500">
+              ↗
+            </span>
+          ) : null
+        }
+      </div>
       <div>{date}</div>
       <div>
         {content}
       </div>
       <div><b>Technologies</b>: {technologies}</div>
-    </div>
+    </a>
   </div>
 
   {position === "left" ? <div class="hidden flex-1 md:block" /> : null}
 </div>
-
-<script>
-  const cards = document.querySelectorAll("div.info-card");
-
-  cards.forEach((card) => {
-    const htmlCard = card as HTMLElement;
-    card.addEventListener("click", () => {
-      if (htmlCard.dataset.url) window.open(htmlCard.dataset.url, "_blank");
-    });
-  });
-</script>
 
 <style>
   @reference "tailwindcss";

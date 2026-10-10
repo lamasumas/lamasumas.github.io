@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import background from "../../assets/background.jpg";
+
 const navLinks = [
   { href: "#myExperience", long: "My Experience", short: "Career" },
   { href: "#myTechStack", long: "My Tech Stack", short: "Stack" },
@@ -8,8 +11,19 @@ const navLinks = [
 ---
 
 <section
-  class="relative isolate flex min-h-dvh w-full flex-col items-center justify-center gap-6 overflow-hidden bg-[url(../assets/background.jpg)] bg-cover bg-center bg-no-repeat px-4"
+  class="relative isolate flex min-h-dvh w-full flex-col items-center justify-center gap-6 overflow-hidden px-4"
 >
+  <Image
+    src={background}
+    alt=""
+    widths={[720, 1280, 1920, 2560]}
+    sizes="100vw"
+    format="webp"
+    quality={70}
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 -z-20 h-full w-full object-cover"
+  />
   <div
     class="absolute inset-0 -z-10 bg-gradient-to-b from-black/80 via-black/45 to-black/85"
   >
@@ -29,8 +43,8 @@ const navLinks = [
         <span
           class="ping-ring absolute inline-flex h-full w-full rounded-full bg-emerald-400"
         ></span>
-        <span
-          class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"
+        ></span>
       </span>
       Based in Tokyo · Open to opportunities
     </div>
@@ -41,11 +55,11 @@ const navLinks = [
       >
         Eduardo Lamas Suárez
       </h1>
-      <h5
+      <p
         class="text-xl uppercase tracking-[0.2em] sm:text-4xl main-subtitle text-center text-amber-200/90 animate-fade-in-up animate-delay-300"
       >
         Full Stack Engineer
-      </h5>
+      </p>
     </div>
 
     <nav

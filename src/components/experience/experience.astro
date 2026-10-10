@@ -1,5 +1,4 @@
 ---
-import "./timeline-section.astro";
 import TimelineSection from "./timeline-section.astro";
 import EmptyTimelineSection from "./empty-timeline-section.astro";
 ---
@@ -8,18 +7,18 @@ import EmptyTimelineSection from "./empty-timeline-section.astro";
   id="myExperience"
   class="w-full min-h-dvh flex flex-col justify-center gap-13 p-3"
 >
-  <div class="text-4xl md:text-5xl flex section-title justify-center">
+  <h2 class="text-4xl md:text-5xl flex section-title justify-center">
     My Journey So Far
-  </div>
+  </h2>
   <div class="w-full h-fit flex flex-col justify-center">
     <EmptyTimelineSection />
     <EmptyTimelineSection />
     <TimelineSection
       position="left"
-      company="Tap Co Ltd "
+      company="Tap Co Ltd"
       role="FullStack Engineer"
-      content="Devloping and designing the new main products for several famous hotels in Japan, while mantaining the current available products."
-      technologies="Angular,Typescript, Java, Spring and SQL."
+      content="Developing and designing the new main products for several famous hotels in Japan, while maintaining the current available products."
+      technologies="Angular, Typescript, Java, Spring and SQL."
       date="01/11/2023 - Nowadays"
       url="https://www.tap-ic.co.jp/en/"
     />
@@ -27,8 +26,8 @@ import EmptyTimelineSection from "./empty-timeline-section.astro";
       position="right"
       company="CERN"
       role="FullStack Engineer"
-      content="Devloping and mantaining business internal applicaiton (like the payroll, document signing and budgeting systems ) used by 2500 employees, in the FAP-BC section."
-      technologies="Java, Spring, R, Pyhton and SQL."
+      content="Developing and maintaining business internal applications (like the payroll, document signing and budgeting systems) used by 2500 employees, in the FAP-BC section."
+      technologies="Java, Spring, R, Python and SQL."
       date="01/10/2021 - 01/10/2023"
       url="https://home.cern/"
     />
@@ -36,7 +35,7 @@ import EmptyTimelineSection from "./empty-timeline-section.astro";
       position="left"
       company="Merkle"
       role="Java Programmer Analyst"
-      content="Mantaining the legacy Order Management System for clients like SkyTv, used in UK and USA."
+      content="Maintaining the legacy Order Management System for clients like SkyTv, used in UK and USA."
       technologies="Java, Spring and SQL."
       date="01/09/2020 - 01/10/2021"
       url="https://www.merkle.com/en.html"
@@ -45,19 +44,11 @@ import EmptyTimelineSection from "./empty-timeline-section.astro";
     <TimelineSection
       position="right"
       company="Munster University"
-      role="Intership - FullStack Engineer"
-      content="Working along researches in a One-Stop shop website for the ECCO project (Eurpean Commision Project)."
-      technologies="Java, Spring and  MongoDB."
+      role="Internship - FullStack Engineer"
+      content="Working alongside researchers on a One-Stop shop website for the ECCO project (European Commission Project)."
+      technologies="Java, Spring and MongoDB."
       date="01/05/2019 - 31/08/2019"
       url="https://vb.nweurope.eu/projects/project-search/ecco-creating-new-local-energy-community-co-operatives/news/the-ecco-one-stop-shop-is-the-energy-community-accelerator-network/"
     />
   </div>
 </section>
-
-<style>
-  @reference "tailwindcss";
-
-  .empty-slot {
-    @apply flex h-full;
-  }
-</style>

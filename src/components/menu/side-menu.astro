@@ -8,39 +8,41 @@ import about from "../../assets/about.svg";
 
 <aside
   id="sidebar"
-  class="fixed bottom-0 left-0 z-50 flex w-full flex-row items-center justify-center p-2 opacity-0 transition-opacity duration-500 md:top-0 md:bottom-auto md:h-screen md:w-auto md:flex-col md:p-4"
+  inert
+  class="pointer-events-none fixed bottom-0 left-0 z-50 flex w-full flex-row items-center justify-center p-2 opacity-0 transition-opacity duration-500 md:top-0 md:bottom-auto md:h-screen md:w-auto md:flex-col md:p-4"
 >
-  <div
+  <nav
+    aria-label="Section navigation"
     class="flex w-full flex-row justify-around gap-4 rounded-t-xl bg-gray-700/60 px-4 py-3 backdrop-blur-sm md:w-auto md:flex-col md:justify-center md:gap-7 md:rounded-xl md:py-7"
   >
     <SectionLink icon={briefcase} link="#myExperience" text="My Experience" />
     <SectionLink icon={techStack} link="#myTechStack" text="My Tech Stack" />
     <SectionLink icon={projects} link="#myProjects" text="My Projects" />
     <SectionLink icon={about} link="#aboutMe" text="About Me" />
-  </div>
+  </nav>
 </aside>
 
-<script type="module">
+<script>
   const sidebar = document.getElementById("sidebar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      // Show sidebar after scrolling 50px
-      sidebar.classList.remove("exit");
+  if (sidebar) {
+    const toggle = (visible: boolean) => {
+      sidebar.classList.remove("enter", "exit");
       void sidebar.offsetWidth;
-      sidebar.classList.add("enter");
-    } else {
-      // Hide sidebar if back at top
-      sidebar.classList.remove("enter");
-      void sidebar.offsetWidth;
-      sidebar.classList.add("exit");
-    }
-  });
+      sidebar.classList.add(visible ? "enter" : "exit");
+      sidebar.inert = !visible;
+    };
+
+    window.addEventListener("scroll", () => toggle(window.scrollY > 100), {
+      passive: true,
+    });
+  }
 </script>
 
 <style>
   .enter {
     opacity: 1;
+    pointer-events: auto;
     animation: slide-in-left 0.5s ease-out forwards;
   }
 
