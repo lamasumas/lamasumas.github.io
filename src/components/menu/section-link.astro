@@ -17,7 +17,12 @@ const { icon, link, text } = Astro.props;
 >
   {
     icon ? (
-      <Image src={icon} title={text} class="w-8 h-8 text-white" alt={text} />
+      <Image
+        src={icon}
+        title={text}
+        class="w-8 h-8 brightness-0 invert"
+        alt={text}
+      />
     ) : (
       text
     )
