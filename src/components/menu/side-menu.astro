@@ -8,9 +8,11 @@ import about from "../../assets/about.svg";
 
 <aside
   id="sidebar"
-  class="flex flex-col gap-5 z-50 h-screen fixed top-0 bg-transparent items-center justify-center p-4 opacity-0 transition-opacity duration-500"
+  class="fixed bottom-0 left-0 z-50 flex w-full flex-row items-center justify-center p-2 opacity-0 transition-opacity duration-500 md:top-0 md:bottom-auto md:h-screen md:w-auto md:flex-col md:p-4"
 >
-  <div class="flex flex-col bg-gray-700/60 py-7 px-4 rounded-xl gap-7">
+  <div
+    class="flex w-full flex-row justify-around gap-4 rounded-t-xl bg-gray-700/60 px-4 py-3 backdrop-blur-sm md:w-auto md:flex-col md:justify-center md:gap-7 md:rounded-xl md:py-7"
+  >
     <SectionLink icon={briefcase} link="#myExperience" text="My Experience" />
     <SectionLink icon={techStack} link="#myTechStack" text="My Tech Stack" />
     <SectionLink icon={projects} link="#myProjects" text="My Projects" />
@@ -38,7 +40,7 @@ import about from "../../assets/about.svg";
 
 <style>
   .enter {
-    opacity: 100;
+    opacity: 1;
     animation: slide-in-left 0.5s ease-out forwards;
   }
 

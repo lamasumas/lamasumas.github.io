@@ -12,21 +12,25 @@ interface Props {
 const { position, company, content, date, role, technologies, url } =
   Astro.props;
 
-const borderClass = position == "left" ? "border-r-2 border-dashed" : "";
+const borderClass = position === "left" ? "md:border-r-2 md:border-dashed" : "";
 ---
 
-<div class="w-full flex">
+<div class="flex w-full">
   {
-    position == "right" ? (
-      <div class="flex-1 max-w-1/2 border-r-2 border-dashed" />
+    position === "right" ? (
+      <div class="hidden flex-1 border-r-2 border-dashed border-black md:block" />
     ) : null
   }
 
   <div
-    class=`work-position ${position} flex flex-col ${borderClass} border-black p-3 flex-1 max-w-1/2 `
+    class:list={[
+      "work-position relative flex flex-1 flex-col border-l-2 border-dashed border-black p-3 pl-6 md:max-w-1/2 md:border-l-0 md:pl-3",
+      position,
+      borderClass,
+    ]}
   >
     <div
-      class="hover:outline-black hover:outline-3 info-card rounded-md p-2 max-w-md hover:cursor-pointer"
+      class="hover:outline-black hover:outline-3 info-card w-full max-w-md rounded-md p-2 hover:cursor-pointer"
       data-url={url}
     >
       <div><b>{company}</b> - <em>{role}</em></div>
@@ -38,82 +42,98 @@ const borderClass = position == "left" ? "border-r-2 border-dashed" : "";
     </div>
   </div>
 
-  {position == "left" ? <div class="flex-1 max-w-1/2" /> : null}
-  <script>
-    const cards = document.querySelectorAll("div.info-card");
+  {position === "left" ? <div class="hidden flex-1 md:block" /> : null}
+</div>
 
-    // Handle clicks on each button.
-    cards.forEach((card) => {
-      const htmlCard = card as HTMLElement;
-      card.addEventListener("click", () => {
-        if (htmlCard.dataset.url) window.open(htmlCard.dataset.url, "_blank");
-      });
+<script>
+  const cards = document.querySelectorAll("div.info-card");
+
+  cards.forEach((card) => {
+    const htmlCard = card as HTMLElement;
+    card.addEventListener("click", () => {
+      if (htmlCard.dataset.url) window.open(htmlCard.dataset.url, "_blank");
     });
-  </script>
+  });
+</script>
 
-  <style>
-    @reference "tailwindcss";
-    .work-position {
-      position: relative;
-    }
+<style>
+  @reference "tailwindcss";
 
-    .work-position:hover.right::after {
-      animation: bounce 1s infinite;
-      width: 15px; /* circle size */
-      height: 15px;
-      border: black solid 4px;
-      background: white;
-      left: -8px; /* distance from left */
-    }
-    .work-position:hover.left::after {
-      animation: bounce 1s infinite;
-      width: 15px; /* circle size */
-      height: 15px;
-      right: -8px; /* distance from left */
-      border: black solid 4px;
-      background: white;
-    }
+  .work-position:hover.right::after {
+    animation: bounce 1s infinite;
+    width: 15px; /* circle size */
+    height: 15px;
+    border: black solid 4px;
+    background: white;
+    left: -8px; /* distance from left */
+  }
+  .work-position:hover.left::after {
+    animation: bounce 1s infinite;
+    width: 15px; /* circle size */
+    height: 15px;
+    right: -8px; /* distance from left */
+    border: black solid 4px;
+    background: white;
+  }
 
+  .right {
+    &::after {
+      content: "";
+      position: absolute; /* keep it always visible */
+      top: 15px; /* distance from top */
+      left: -6px; /* distance from left */
+      width: 10px; /* circle size */
+      height: 10px;
+      background: black; /* any color */
+      border-radius: 50%; /* makes it a circle */
+      transition: transform 0.3s ease;
+      z-index: 9999; /* above other elements */
+    }
+  }
+  .left {
+    &::after {
+      content: "";
+      position: absolute; /* keep it always visible */
+      top: 15px; /* distance from top */
+      right: -6px; /* distance from left */
+      width: 10px; /* circle size */
+      height: 10px;
+      background: black; /* any color */
+      border-radius: 50%; /* makes it a circle */
+      z-index: 9999; /* above other elements */
+      transition: transform 0.3s ease;
+    }
+  }
+
+  /* ponytail: mobile is single-column, so every node sits on the left line */
+  @media (width < 48rem) {
+    .left,
+    .right {
+      align-items: stretch;
+    }
+    .left::after,
+    .right::after {
+      left: -6px;
+      right: auto;
+    }
+  }
+
+  @media (width >= 48rem) {
     .right {
       align-items: flex-start;
-      &::after {
-        content: "";
-        position: absolute; /* keep it always visible */
-        top: 15px; /* distance from top */
-        left: -6px; /* distance from left */
-        width: 10px; /* circle size */
-        height: 10px;
-        background: black; /* any color */
-        border-radius: 50%; /* makes it a circle */
-        transition: transform 0.3s ease;
-        z-index: 9999; /* above other elements */
-      }
     }
     .left {
       align-items: flex-end;
-
-      &::after {
-        content: "";
-        position: absolute; /* keep it always visible */
-        top: 15px; /* distance from top */
-        right: -6px; /* distance from left */
-        width: 10px; /* circle size */
-        height: 10px;
-        background: black; /* any color */
-        border-radius: 50%; /* makes it a circle */
-        z-index: 9999; /* above other elements */
-        transition: transform 0.3s ease;
-      }
     }
+  }
 
-    @keyframes bounce {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
     }
-  </style>
-</div>
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+</style>
